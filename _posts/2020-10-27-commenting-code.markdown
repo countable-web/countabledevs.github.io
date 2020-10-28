@@ -9,7 +9,7 @@ categories: python refactoring clean-code
 Writing comments in code is commonly discouraged and considered a code smell (including in Robert C. Martin's _Clean Code_, which I highly recommend). The reason for this is that comments are not as visually perceivable as the actual code, especially with most editors' colour schemes. This leads to comments not being updated when the code is updated, and becoming misleading or even incorrect over time.
 
 Here's an example where (I think?) the comment is referring to code that has been removed or refactored:
-![Example of orphaned comment](/assets/images/2020-10-27-commenting-code/image1.png)
+![Example of orphaned comment](/devblog/assets/images/2020-10-27-commenting-code/image1.png)
 
 Sometimes comments may be helpful in explaining logic that may not be intuitive or clear. This is a slightly better example of commenting (because it explains the reasoning for this logic).
 ```
