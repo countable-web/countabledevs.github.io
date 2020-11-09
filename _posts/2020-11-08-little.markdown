@@ -51,20 +51,10 @@ function countToFifteen() {
 }
 document.addEventListener('click', countToFifteen)
 document.removeEventListener('click', countToFifteen)
-
-/*
-Now my event listener is easily removable because I have it referenced as a function. 
-Also, it's clear what happens after "click" is executed, it runs countToFifteen. 
-Imagine you had a complicated algorithm in there, how would you understand what it does without completely 
-understanding the algorithm? If I didn't take it out as a 
-function and named it countToFifteen, it may had taken you 
-minutes, hours, days to realize what it does. What takes 
-little of the programmer, may be huge for the next time 
-around. Even if it's the same programmer.
-*/
 })
-
 ```
+
+Now my event listener is easily removable because I have it referenced as a function. Also, it's clear what happens after "click" is executed, it runs countToFifteen. Imagine you had a complicated algorithm in there, how would you understand what it does without completely understanding the algorithm? If I didn't take it out as a function and named it countToFifteen, it may had taken you minutes, hours, days to realize what it does. What takes little of the programmer, may be huge for the next time around. Even if it's the same programmer.
 
 The only improvement made to the simple event handler was to extract it as a function, give a name of what it does. But it's a tremendous improvement, and this is all it takes to write more maintainable code. It doesn't matter to me as much if you can solve hard questions on leetcode if you do not write maintainable code. Time is money. Next time I look at this code, I immediately know what's going on and can immediately debug, add features to it.
 
