@@ -38,7 +38,10 @@ document.addEventListener('click', (e) => {
 document.removeEventListener('click', function () { ... })
 
 /*
-Can I write a function instead? What If I wanted to test my algorithm without clicking the button? Because right now I can't.
+Can I write a function instead? 
+What If I wanted to test my algorithm 
+without clicking the button? 
+Because right now I can't.
 */
 
 function countToFifteen() {
@@ -50,7 +53,14 @@ document.addEventListener('click', countToFifteen)
 document.removeEventListener('click', countToFifteen)
 
 /*
-Now my event listener is easily removable because I have it referenced as a function. Also, it's clear what happens after "click" is executed, it runs countToFifteen. Imagine you had a complicated algorithm in there, how would you understand what it does without completely understanding the algorithm? If I didn't take it out as a function and named it countToFifteen, it may had taken you minutes, hours, days to realize what it does. What takes little of the programmer, may be huge for the next time around. Even if it's the same programmer.
+Now my event listener is easily removable because I have it referenced as a function. 
+Also, it's clear what happens after "click" is executed, it runs countToFifteen. 
+Imagine you had a complicated algorithm in there, how would you understand what it does without completely 
+understanding the algorithm? If I didn't take it out as a 
+function and named it countToFifteen, it may had taken you 
+minutes, hours, days to realize what it does. What takes 
+little of the programmer, may be huge for the next time 
+around. Even if it's the same programmer.
 */
 })
 
