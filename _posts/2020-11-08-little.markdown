@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "Being little more civilized"
+author: "Aaron"
+date:   2020-11-08
+categories: maintenance
+---
+
+So you work on your projects, you read material about how to do things, you go on stackoverflow, you watch youtube videos. You code to the best of your ability (maybe not all times). This is what we do as developers. We are pretty much only concerned about "doing things" without too much thinking (Juniors, anyway). I've seen many fresh undergraduates, bootcamp developers that virtually all think the same, and I've only seen very few that think different.
+
+And I feel you. Because that was me, once. Just doing whatever I tasks that I was given, implement it and move on.
+
+But maybe days later, months later, or years later you comeback to the same project and find it very difficult to modify or to add to existing features. This isn't because what you wrote didn't work. This isn't because what you wrote didn't do what the task said. This is because you probably only did exactly what the task said.
+
+This isn't a lecture on how to code, but I wanted to differentiate between what I would call a Junior Developer and a Senior Developer. It's not the experience that diffrentiates between the two, but it's the way of thinking about problems. You could be a terrible coder, but you could hell write very maintainable code. You write functions, classes. You interface, extend, modules, distinct logical units are small, isolated, and easily testable. None of these require you to be Linus Torvalds, and they are very easily achievable by being a little more civil when you write code. I'll put emphasis on this once again. Coding isn't the problem at all. We act it's a big deal and think we're smart because it looks smart. But really, it's just an another paradigm to solve problems.
+
+So how do we be a little more civil to what we do?
+
+Well, what did society do? I don't want to sound like a Historian here, but how did some socities become more civilized?
+
+They probably "thought" more about things. They probably analyzed the side effects of things. And thought "Hmm, this is bad because ..." or "Hmm, this causes ... so we shouldn't do it this way".
+
+I'm not the greatest technical writer, but I hope you get the point. We just have to think, just a little bit more.
+Here's an example
+
+```
+// Task: Run the algorithm on click
+
+document.addEventListener('click', (e) => {
+    for (var i = 0; i < 15; i++) {
+        // Some Complicated Algorithm that you will write
+    }
+})
+
+// But don't stop here! Let's think a little more.
+// Can I at one point remove the event listener?
+
+document.removeEventListener('click', function () { ... })
+
+/*
+Can I write a function instead? What If I wanted to test my algorithm without clicking the button? Because right now I can't.
+*/
+
+function countToFifteen() {
+    for (var i = 0; i < 15; i++) {
+        // Some Complicated Algorithm that you will write
+    }    
+}
+document.addEventListener('click', countToFifteen)
+document.removeEventListener('click', countToFifteen)
+
+/*
+Now my event listener is easily removable because I have it referenced as a function. Also, it's clear what happens after "click" is executed, it runs countToFifteen. Imagine you had a complicated algorithm in there, how would you understand what it does without completely understanding the algorithm? If I didn't take it out as a function and named it countToFifteen, it may had taken you minutes, hours, days to realize what it does. What takes little of the programmer, may be huge for the next time around. Even if it's the same programmer.
+*/
+})
+
+```
+
+The only improvement made to the simple event handler was to extract it as a function, give a name of what it does. But it's a tremendous improvement, and this is all it takes to write more maintainable code. It doesn't matter to me as much if you can solve hard questions on leetcode if you do not write maintainable code. Time is money. Next time I look at this code, I immediately know what's going on and can immediately debug, add features to it.
+
+But who am I to talk right? I do not even follow my own principles 100% of the time ;)
